@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet - Travel_with_fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Travel_with_fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Digital Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loyaltypoints.html">Loyalty Points</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moneyinsights.html">Money Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologies_present.html">Technologies present</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-outline-light">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <h2>Good Morning User!</h2>
+                <div class="alert alert-primary text-center" role="alert">
+                    <img src="img/flag.png" alt="SGD" style="width: 30px;">
+                    <strong>You have (SGD)</strong>
+                    <div id="totalAmount">2000.00</div>
+                </div>
+                <button class="btn btn-primary w-100 mb-3" onclick="window.location.href='SMcontacts.html'">Transfers/Payment</button>
+                <button class="btn btn-secondary w-100 mb-3"onclick="window.location.href='foreignexchange.html'">Foreign Exchange</button>
+                <button class="btn btn-success w-100 mb-3" onclick="window.location.href='topup.html'">Top Up</button>
+                <h4>Your Activity:</h4>
+                <ul class="list-group" id="transactionHistory">
+                    <!-- Transaction history will be appended here -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <script src="digitalwallet.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

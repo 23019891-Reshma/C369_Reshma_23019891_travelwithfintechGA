@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Confirmation - Travel_with_fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Travel_with_fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Digital Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loyaltypoints.html">Loyalty Points</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moneyinsights.html">Money Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologies_present.html">Technologies present</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col-md-6 text-center p-4" style="background-color: #4a148c; color: white; border-radius: 10px;">
+                <img src="img/tick.png" alt="Payment Successful" style="width: 100px;">
+                <h2 id="amountPaid"></h2>
+                <p>To:</p>
+                <p><strong id="recipientPhone"></strong></p>
+                <p id="recipientName"></p>
+                <p>When:</p>
+                <p><strong id="transactionDate"></strong></p>
+                <p>Transaction ID: 38920208349403</p>
+                <a href="#" class="btn btn-outline-light mb-2">See transaction details</a>
+                <br>
+                <a href="digitalwallet.html" class="btn btn-success">Back to Home</a>
+            </div>
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const transactionDateElement = document.getElementById('transactionDate');
+            const currentDate = new Date();
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            transactionDateElement.textContent = currentDate.toLocaleDateString(undefined, options);
+            
+            const lastTransaction = JSON.parse(localStorage.getItem('lastTransaction'));
+            document.getElementById('amountPaid').textContent = `${lastTransaction.amount} ${lastTransaction.currency} PAID`;
+            document.getElementById('recipientPhone').textContent = lastTransaction.recipient.phone;
+            document.getElementById('recipientName').textContent = lastTransaction.recipient.name;
+        });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+

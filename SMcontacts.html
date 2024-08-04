@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Send Money - Travel_with_fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Travel_with_fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Digital Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loyaltypoints.html">Loyalty Points</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moneyinsights.html">Money Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologies_present.html">Technologies present</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-md-6">
+                <h2>Send Money</h2>
+                <div class="input-group mb-3">
+                    <input type="text" class="form-control" placeholder="Search contacts" id="searchInput">
+                    <button class="btn btn-outline-secondary" type="button" onclick="searchContacts()">Search</button>
+                </div>
+                <div class="btn-group mb-3" role="group">
+                    <button type="button" class="btn btn-secondary" id="recentButton" onclick="showRecent()">Recent</button>
+                    <button type="button" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#addContactModal">Add Contact</button>
+                </div>
+                <ul class="list-group" id="contactList">
+                    <li class="list-group-item" onclick="selectContact('+65 98346712', 'May Lee (ML)')">ML +65 98346712</li>
+                    <li class="list-group-item" onclick="selectContact('+65 20917385', 'Reshma (R)')">R +65 20917385</li>
+                    <li class="list-group-item" onclick="selectContact('+65 84761058', 'Yelena liam (YL')">YL +65 84761058</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for adding contacts -->
+    <div class="modal fade" id="addContactModal" tabindex="-1" aria-labelledby="addContactModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="addContactModalLabel">Add New Contact</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form id="addContactForm">
+                        <div class="mb-3 row">
+                            <label for="contactName" class="col-sm-2 col-form-label">Name:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="contactName" required>
+                            </div>
+                        </div>
+                        <div class="mb-3 row">
+                            <label for="contactPhone" class="col-sm-2 col-form-label">Contact:</label>
+                            <div class="col-sm-10">
+                                <input type="text" class="form-control" id="contactPhone" required>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Add Contact</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="SMcontacts.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
+
+
+       

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel_with_fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #1E1E1E;
+            color: white;
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .navbar {
+            background-color: black;
+        }
+
+        .navbar a {
+            color: white;
+            margin-right: 20px;
+        }
+
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+
+        .navbar .login-signup {
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+
+        .navbar .login-signup:hover {
+            background-color: #ddd;
+        }
+
+        .carousel-item {
+            position: relative;
+        }
+
+        .carousel-item img {
+            width: 100%;
+            height: 92vh;
+            object-fit: cover;
+        }
+
+        .carousel-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1;
+        }
+
+        .carousel-caption {
+            position: absolute;
+            bottom: 20%;
+            left: 5%;
+            z-index: 2;
+            color: white;
+            text-align: left;
+        }
+
+        .carousel-caption h1 {
+            font-size: 48px;
+            font-weight: bold;
+        }
+
+        .carousel-caption p {
+            font-size: 20px;
+            margin-bottom: 30px;
+        }
+
+        .carousel-caption .btn {
+            background-color: #FFD700;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            cursor: pointer;
+            text-decoration: none;
+        }
+
+        .carousel-caption .btn:hover {
+            background-color: #FFC107;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Travel_with_fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Digital Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loyaltypoints.html">Loyalty Points</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moneyinsights.html">Money Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologies_present.html">Technologies present</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="login-signup">login/sign up</a>
+            </div>
+        </div>
+    </nav>
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img/maps.png" class="d-block w-100" alt="Traveler">
+                <div class="carousel-caption">
+                    <h1>Top-notch financial services for travelers</h1>
+                    <p>We take pride in helping travelers manage their finances efficiently and securely, no matter
+                        where they are. Click the button to start now!</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/travellers.jpg" class="d-block w-100" alt="Map">
+                <div class="carousel-caption">
+                    <h1>Explore the world with ease</h1>
+                    <p>Our services are designed to help you navigate and manage your finances wherever you go. Click
+                        the button to learn more!</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="img/lady.avif" class="d-block w-100" alt="Travel">
+                <div class="carousel-caption">
+                    <h1>Travel smarter with our solutions</h1>
+                    <p>Stay connected and in control of your finances while exploring new destinations. Click the
+                        button to get started!</p>
+                    <a href="about.html" class="btn">Learn More</a>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+            data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+
+</html>
+
+
+

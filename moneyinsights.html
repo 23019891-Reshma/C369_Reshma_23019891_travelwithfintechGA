@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Money Insights - Travel_with_fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homepage.html">Travel_with_fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Digital Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loyaltypoints.html">Loyalty Points</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moneyinsights.html">Money Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologies_present.html">Technologies present</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="btn btn-outline-light">Logout</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h2 class="text-center">Money Insights</h2>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="card p-3 mb-4">
+                    <h4>Money Flow</h4>
+                    <canvas id="moneyFlowChart" style="background-color: white;"></canvas>
+                    <div class="row mt-3">
+                        <div class="col-md-6">
+                            <div class="card text-white bg-success mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Money In (SGD)</h5>
+                                    <p class="card-text" id="totalMoneyIn">0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card text-white bg-danger mb-3">
+                                <div class="card-body">
+                                    <h5 class="card-title">Total Money Out (SGD)</h5>
+                                    <p class="card-text" id="totalMoneyOut">0.00</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card p-3 mb-4">
+                    <h4>Savings Goal</h4>
+                    <p>Set, Save, Go!</p>
+                    <div class="mb-3">
+                        <label for="savingsGoalAmount" class="form-label">Set Daily Budget (SGD):</label>
+                        <input type="number" class="form-control" id="savingsGoalAmount">
+                    </div>
+                    <button id="toggleSavingsGoal" class="btn btn-primary">Enable Savings Goal</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="moneyinsights.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js
+

@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Travel_with_fintech</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            background-color: #faefe0;
+            color: black;
+            font-family: 'Open Sans', sans-serif;
+        }
+        .navbar {
+            background-color: black;
+        }
+        .navbar a {
+            color: white;
+            margin-right: 20px;
+        }
+        .navbar a:hover {
+            text-decoration: underline;
+        }
+        .navbar .login-signup {
+            background-color: white;
+            color: black;
+            padding: 5px 10px;
+            border-radius: 5px;
+            text-decoration: none;
+        }
+        .navbar .login-signup:hover {
+            background-color: #ddd;
+        }
+        .content-section {
+            padding: 50px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .right-section {
+            background-color: #f5f5f5;
+            padding: 20px;
+            border-radius: 10px;
+            color: black;
+            font-size: 18px;
+            font-weight: bold;
+            width: 100%;
+        }
+        .contact-info {
+            margin-bottom: 20px;
+        }
+        .contact-info p {
+            margin: 0;
+        }
+        .social-icons {
+            display: flex;
+            gap: 20px;
+            justify-content: left;
+            margin: 20px 0;
+        }
+        .social-icons img {
+            width: 40px;
+            height: 40px;
+        }
+        #map {
+            height: 400px;
+            margin: 20px 0;
+        }
+        #navigateButton {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">Travel_with_fintech</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="homepage.html">Home Page</a></li>
+                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="service.html">Services</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Digital Wallet</a></li>
+                    <li class="nav-item"><a class="nav-link" href="loyaltypoints.html">Loyalty Points</a></li>
+                    <li class="nav-item"><a class="nav-link" href="moneyinsights.html">Money Insights</a></li>
+                    <li class="nav-item"><a class="nav-link" href="technologies_present.html">Technologies present</a></li>
+                    <li class="nav-item"><a class="nav-link" href="reviews.html">Reviews</a></li>
+                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+                </ul>
+                <a href="#" class="login-signup">login/sign up</a>
+            </div>
+        </div>
+    </nav>
+    <div class="content-section container">
+        <div class="right-section">
+            <h1>Get in Touch With Us!</h1>
+            <div class="social-icons">
+                <a href="#"><img src="https://w7.pngwing.com/pngs/477/596/png-transparent-computer-icons-facebook-blog-facebook-logo-desktop-wallpaper-facebook-icon.png" alt="Facebook"></a>
+                <a href="#"><img src="https://i.pinimg.com/736x/7f/7b/87/7f7b872e56430e68d69538b17525c51c.jpg" alt="Instagram"></a>
+                <a href="#"><img src="https://static.vecteezy.com/system/resources/previews/023/986/922/original/reddit-logo-reddit-logo-transparent-reddit-icon-transparent-free-free-png.png" alt="Twitter"></a>
+            </div>
+            <div class="contact-info">
+                <p>Location:</p>
+                <p>9 Woodlands Ave 9, Singapore 738964</p>
+                <p>+65 8930 2098</p>
+                <p>Email:</p>
+                <p>hello@rp.edu.sg</p>
+            </div>
+
+            <div id="map"></div>
+            <button id="navigateButton" class="btn btn-primary">Navigate to Republic Polytechnic</button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        var map = L.map('map').setView([1.4422, 103.7854], 15);
+        L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+            maxZoom: 19,
+            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+        }).addTo(map);
+        var rpMarker = L.marker([1.4422, 103.7854]).addTo(map)
+            .bindPopup('Republic Polytechnic<br>Singapore')
+            .openPopup();
+        document.getElementById('navigateButton').addEventListener('click', function() {
+            map.setView([1.4422, 103.7854], 15);
+            rpMarker.openPopup();
+        });
+    </script>
+</body>
+</html>
+
+
+
